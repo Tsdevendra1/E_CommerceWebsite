@@ -1,0 +1,21 @@
+{% extends 'main/base.html' %}
+{##}
+{#{% block title %}#}
+{#    Clothing#}
+{#{% endblock %}#}
+
+{% block content %}
+    <div class="main-page-header"><h1 style="font-size:24px;font-weight:bold;">{% block header %}{% endblock %}</h1>
+    </div>
+    <div style="" id="app">
+        {% load custom_filters %}
+        <category-search-bar categories="{{ jsonResponse }}" sorted_selection="{{ request.GET.order_by }}"
+                             num_tops="3"
+                             filter_selection="{{ request.GET|get_list:'filter' }}"
+                             num_bottoms="4"></category-search-bar>
+    </div>
+    {% block main %}
+    {% endblock %}
+
+{% endblock %}
+

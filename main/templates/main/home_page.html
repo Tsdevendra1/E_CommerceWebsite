@@ -1,0 +1,22 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block title %}
+    Home
+{% endblock %}
+
+{% block content %}
+    <div class="text-block-container">
+        <img height="100%" width="100%" src="{% static 'main/images/background-placeholder.jpg' %}">
+        <div class="text-block typewriter">
+            <h1>Welcome</h1>
+            <p class="typewriter" style="font-size:15px;">To Parrot Clothing</p>
+        </div>
+    </div>
+{% endblock %}
+
+{% block document_ready_script %}
+    <script>
+        homepage();
+    </script>
+{% endblock %}

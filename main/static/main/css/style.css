@@ -1,0 +1,485 @@
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+.show-bottom-border {
+    border-bottom: 1px solid dimgrey;
+}
+
+.remove-bottom-border {
+    border-bottom: 0 none;
+}
+
+.display-block {
+    display: block
+}
+
+.display-none {
+    display: none;
+}
+
+.reset-top-page {
+    margin-top: 90px;
+    margin-bottom: 90px;
+}
+
+a,
+a:active,
+a:focus,
+button,
+button:active,
+button:focus {
+    outline: none;
+}
+
+.main-navbar {
+    height: 60px;
+    background: white;
+    display: flex;
+    align-items: center;
+    /*transition: top 0.3s;*/
+}
+
+.nav-bars-wrapper {
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 9994;
+    /*MAGIC HAPPENS HERE */
+    transform: translateZ(0);
+    -webkit-transform: translateZ(0);
+    transition: top 0.3s;
+}
+
+.secondary-navbar {
+    height: 50px;
+    background: #525050;
+    /*display: none;*/
+    align-items: center;
+    /*transition: top 0.3s;*/
+}
+
+.second-navbar-item {
+    height: 100%;
+    border: 1px solid transparent;
+    color: white;
+    font-size: .875rem;
+    background: #525050;
+}
+
+.second-navbar-item:hover {
+    background: white;
+    color: black;
+}
+
+#nav-bar-search-bar {
+    /*Moves it all the way to the right*/
+    margin-left: auto;
+    height: 50%;
+    padding-left: 20px;
+    border-top-left-radius: 4px;
+    border-bottom-left-radius: 4px;
+    border: 0.1rem solid transparent;
+}
+
+a,
+a:hover {
+    color: inherit;
+!important;
+    text-decoration: none !important;
+}
+
+.nav-bar-item {
+    padding: 18px 30px;
+    height: 100%;
+    font-weight: bold;
+    border-right: 1px solid dimgrey;
+    color: black;
+}
+
+#navbar-brand {
+    margin-left: 35px;
+    border-right: 1px solid dimgrey;
+}
+
+#navbar-brand:hover {
+    color: black !important;
+}
+
+.nav-bar-item:hover {
+    color: white;
+}
+
+.selected-tab {
+    color: white;
+    background: #525050;
+}
+
+.nav-bar-tab:hover {
+    background: #525050;
+}
+
+#search-icon {
+    background: white;
+    height: 50%;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    border: 1px solid transparent;
+}
+
+#shopping-basket {
+    color: dimgrey;
+    margin-right: 25px;
+    margin-left: 25px;
+}
+
+.search-bar-wrapper {
+    border: 1px solid dimgrey;
+}
+
+@media screen and (max-width: 796px) {
+    .nav-bar-tab {
+        display: none;
+    }
+
+    .display-block {
+        display: none;
+    }
+
+    .main-navbar {
+        border-bottom: 1px solid dimgrey;
+    }
+
+    #search-icon {
+        display: none;
+    }
+
+    #nav-bar-search-bar {
+        display: none;
+    }
+
+    #shopping-basket {
+        margin-left: auto;
+    }
+
+}
+
+.footer {
+    height: 242px;
+    background: #eeeeee;
+}
+
+.footer-title {
+    font-weight: bold;
+    color: #666666;
+}
+
+.footer-item {
+    display: block;
+    font-size: 0.8rem;
+    margin: 1rem 0;
+    color: #666666;
+}
+
+.footer-item:hover {
+    color: #0770cf;
+}
+
+.above-footer {
+    border-top: 1px solid dimgrey;
+    height: 61px;
+    display: flex;
+
+    justify-content: center;
+}
+
+.social-icon {
+    font-size: 25px;
+    margin: 17px 20px 0;
+    vertical-align: middle;
+}
+
+.text-block-container {
+    position: relative;
+}
+
+.text-block {
+    position: absolute;
+    top: 350px;
+    left: 250px;
+    background-color: black;
+    color: white;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+@media screen and (max-width: 905px) {
+    .text-block {
+        top: 250px;
+        left: 150px;
+    }
+
+}
+
+@media screen and (max-width: 765px) {
+    .text-block {
+        top: 220px;
+        left: 20px;
+    }
+
+}
+
+@media screen and (max-width: 550px) {
+    .text-block {
+        top: 120px;
+        left: 20px;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .text-block {
+        display: none;
+    }
+}
+
+.typewriter h1 {
+    font-family: monospace; /* Web-safe typewriter-like font */
+    overflow: hidden; /* Ensures the content is not revealed until the animation */
+    border-right: .15em solid orange; /* The typwriter cursor */
+    white-space: nowrap; /* Keeps the content on a single line */
+    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+    letter-spacing: .15em; /* Adjust as needed */
+    animation: typing 3.5s steps(30, end),
+    blinking-cursor .5s step-end infinite;
+}
+
+/* The typing effect */
+@keyframes typing {
+    from {
+        width: 0
+    }
+    to {
+        width: 100%
+    }
+}
+
+/* The typewriter cursor effect */
+@keyframes blinking-cursor {
+    from, to {
+        border-color: transparent
+    }
+    50% {
+        border-color: orange;
+    }
+}
+
+.inline-list {
+    display: inline;
+    margin-right: 10px;
+    margin-left: 10px;
+}
+
+.options-wrapper {
+    background-color: #eeeeee;
+    padding-left: 40px;
+}
+
+.fa-caret-down {
+    margin-left: 80px;
+}
+
+.option-button {
+    border-left: 1px solid transparent;
+    border-right: 1px solid transparent;
+    border-top: 1px solid lightgrey;
+    border-bottom: 1px solid lightgrey;
+    padding-top: 8px;
+    padding-bottom: 8px;
+    background: #eeeeee;
+    font-size: .9rem;
+    color: #666666;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+ul {
+    padding: 0 0;
+    margin: 0 0;
+}
+
+#sort-minibox {
+    position: absolute;
+    top: 137px;
+    left: 10px;
+}
+
+#product-minibox {
+    position: absolute;
+    left: 365px;
+    top: 137px;
+    z-index: 999999;
+}
+
+#category-minibox {
+    position: absolute;
+    left: 168px;
+    top: 137px;
+}
+
+.overlap {
+    z-index: 9999999;
+    display: none;
+    margin-top: 50px;
+    margin-left: 40px;
+    background: #eeeeee;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    -webkit-border-radius: 2px;
+    -moz-border-radius: 2px;
+    border-radius: 2px;
+}
+
+.selected-option {
+    border: 1px solid blue;
+}
+
+.option-select {
+    background: white;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    margin: 10px 10px;
+    width: 336px;
+    height: 44px;
+    text-align: left;
+    padding-top: 10px;
+}
+
+.option-link {
+    margin-left: 20px;
+}
+
+.fa-circle {
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.fa-dot-circle {
+    float: right;
+    margin-right: 20px;
+    margin-top: 5px;
+}
+
+.option-select:hover {
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+
+.category-amount {
+    margin-left: 6px;
+    padding-bottom: 3px;
+    color: #b49ba8;
+}
+
+.selected-category {
+    background: #0770cf;
+}
+
+.category-header {
+    background: white;
+    height: 60px;
+}
+
+.all-button {
+    margin-top: -20px;
+    position: relative;
+    margin-right: 15px;
+    background: white;
+    border: 2px solid #999999;
+    font-weight: bold;
+    color: #666666;
+    float: right;
+}
+
+.all-button:hover {
+    color: #0770cf;
+    border: 2px solid #0770cf;
+}
+
+.amount-selected {
+    font-size: 15px;
+    margin: 0;
+    padding-top: 16px;
+    padding-left: 15px;
+}
+
+.headline {
+    border-bottom: 1px solid black;
+}
+
+.product {
+    display: inline-block;
+}
+
+#product-list {
+    margin-top: 40px;
+    margin-left: 40px;
+}
+
+.selected-link {
+    background: #0770cf;
+    color: white;
+}
+
+.wide {
+    display: block;
+}
+
+.main-page-header {
+    background: #f8f8f8;
+    padding-top: 85px;
+    padding-bottom: 20px;
+    text-align: center
+}
+
+.product-page-right-column {
+    padding-left: 115px;
+}
+
+.product-price {
+    font-size: 22px;
+}
+
+.left-image-button {
+    position: absolute;
+    z-index: 333;
+    background: transparent;
+    border: 1px solid transparent;
+    top: 300px;
+}
+
+.right-image-button {
+    background: transparent;
+    border: 1px solid transparent;
+    position: absolute;
+    z-index: 333;
+    top: 300px;
+    right: -58px;
+}
+
+.arrow {
+    font-size: 40px;
+}
+
+.add-to-basket {
+    font-weight: bold;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
+
+.arrow {
+    color: black;
+    /* Allows font border */
+    /*text-shadow: -1px 0 white, 0 1px white, 1px 0 white, 0 -1px white;*/
+}
+

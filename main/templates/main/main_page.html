@@ -1,0 +1,27 @@
+{% extends 'main/generic_main_page.html' %}
+
+{% block title %}
+    Clothing
+{% endblock %}
+
+{% block header %}
+    New Items
+{% endblock %}
+
+{% block main %}
+    {#    product-list is used for vue marker#}
+    <div id="product-list">
+        {% for product in product_list %}
+            <product page_url="{% url 'product-detail' pk=product.pk %}" class="product mr-2"
+                     source="{{ product.thumbnail.url }}" price="{{ product.price }}"
+                     title="{{ product.product_name }}"></product>
+        {% endfor %}
+    </div>
+
+{% endblock %}
+
+{% block document_ready_script %}
+    <script>
+        mainPage();
+    </script>
+{% endblock %}

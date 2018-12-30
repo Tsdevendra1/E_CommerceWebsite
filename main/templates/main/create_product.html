@@ -1,0 +1,29 @@
+{% extends 'main/base.html' %}
+{% block title %}
+    Add Clothing
+{% endblock %}
+
+{% block content %}
+    <div class="container reset-top-page">
+        <h3><u>Add Product</u></h3>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+            {% include 'main/generic_form_template.html' with form=form %}
+            {% include 'main/generic_formset_template.html' with formset=image_formset show=1 have_is_valid=0 %}
+            <div id="app">
+                {% verbatim %}
+                <button type="button" @click="removePicture" :disabled="disableRemoveButton"  class="btn btn-danger">Remove Picture</button>
+                <button type="button" @click="showPicture" :disabled="disableAddButton" class="btn btn-success">Add Picture</button>
+                <button style="float:right;" type="submit" class="btn btn-primary">Submit</button>
+                <p class="text-muted" style="font-size: 13px;" v-if="disableRemoveButton">You must have at least one picture to display</p>
+                <p class="text-muted" style="font-size: 13px;" v-if="disableAddButton">You can only add a maximum of 4 images</p>
+                {% endverbatim %}
+            </div>
+        </form>
+    </div>
+{% endblock %}
+{% block document_ready_script %}
+    <script>
+        addPage();
+    </script>
+{% endblock %}

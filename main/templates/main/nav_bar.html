@@ -1,0 +1,26 @@
+<div class="nav-bars-wrapper" id="navbar-app">
+
+    <nav class="main-navbar show-bottom-border">
+        {#        <a id="navbar-brand" href="#" class="nav-bar-item">Parrot Clothing</a>#}
+        <a id="navbar-brand" href="{% url 'home' %}" class="nav-bar-item"><span>Pa</span><span
+                style="color: red;">r</span><span
+                style="color:orange">r</span>o<span style="color: green">t</span> <span style="color: orange">C</span>lo<span
+                style="color:red;">t</span><span style="color: green">h</span>in<span style="color:orange">g</span></a>
+        <div class="nav-bar-item nav-bar-tab">HOME</div>
+
+        <span style="margin-left: auto;" class="search-bar-wrapper">
+    <input id="nav-bar-search-bar" type="text" placeholder="Search...">
+    <button id="search-icon"><i class="fas fa-search"></i></button>
+    </span>
+       <a href="{% url 'view-basket' %}"><i id="shopping-basket" class="fas fa-shopping-basket"></i></a>
+    </nav>
+    <nav class="secondary-navbar display-none">
+        <button data-url="{% url 'main' %}" class="ml-5 second-navbar-item" type="button">Clothing</button>
+        <button data-url="{% url 'add-clothing' %}" class="second-navbar-item" type="button">Add Product</button>
+    </nav>
+</div>
+
+<script>
+    navBar();
+</script>
+
