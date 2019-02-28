@@ -329,7 +329,7 @@ function productPage() {
             addItemToBasket: function (productId) {
                 let csrfToken = document.getElementsByName('csrfmiddlewaretoken')[0].value;
                 let url = document.getElementById('post-url').getAttribute('data-url');
-                saveUserPurchases(url, productId,  csrfToken);
+                saveUserPurchases(url, productId, csrfToken);
             },
             leftImageButton: function () {
                 let images = document.getElementsByClassName('product-image');
